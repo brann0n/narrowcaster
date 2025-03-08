@@ -6,7 +6,7 @@
 
     <groupId>nl.ba99.narrowcaster</groupId>
     <artifactId>Narrowcaster</artifactId>
-    <version>1.5-RELEASE</version>
+    <version>1.6-RELEASE</version>
     <packaging>war</packaging>
 
     <properties>

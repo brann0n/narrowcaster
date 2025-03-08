@@ -65,14 +65,14 @@ const SlideShowPanel = (props) => {
       nextSlideId = slideshows.indexOf(currentSlideshow) + 1;
       console.log("nextSlideId: ", nextSlideId);
     }
-    else{
+    else {
       setLoaded(false);
     }
-    
+
     if (nextSlideId >= slideshows.length) nextSlideId = 0; //start again.
 
     console.log("id: ", nextSlideId);
-    
+
     setCurrentSlideshow(slideshows[nextSlideId]);
     setSlideshowName(slideshows[nextSlideId].name);
   };

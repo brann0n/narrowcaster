@@ -56,10 +56,10 @@ public class SwaggerConfig implements WebMvcConfigurer {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Vigmo API")
-                .description("Vigmo API is the backend api for an Announcements board at NHL Stenden. Made by Students.")
+                .title("Narrowcaster API")
+                .description("This API is the backend for an Announcements board.")
                 .license("MIT")
-                .version("1.0.0")
+                .version("1.6")
                 .build();
     }
 }

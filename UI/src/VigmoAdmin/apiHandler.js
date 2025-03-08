@@ -94,7 +94,7 @@ export default (apiUrl, httpClient = fetchUtils.fetchJson) => ({
             method: 'POST',
             body: JSON.stringify(params.data),
         }).then(({ headers }) => ({
-            data: { ...params.data, id: parseInt(headers.get('location').split('/').pop())},
+            data: { ...params.data, id: parseInt(headers.get('location').split('/').pop()) },
         })),
 
     delete: (resource, params) =>

@@ -1,4 +1,4 @@
-import {jwtDecode} from 'jwt-decode';
+import { jwtDecode } from 'jwt-decode';
 import vars from '../../env.json'
 export default {
   login: (authKey) => {

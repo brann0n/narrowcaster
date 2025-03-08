@@ -7,7 +7,7 @@ export const ConsultationHoursList = props => (
         <Datagrid rowClick="edit">
             <TextField source="id" />
             <TextField source="description" />
-            <SelectField source="weekDay" choices={workDays}/>
+            <SelectField source="weekDay" choices={workDays} />
             <TextField source="startTime" />
             <TextField source="endTime" />
         </Datagrid>

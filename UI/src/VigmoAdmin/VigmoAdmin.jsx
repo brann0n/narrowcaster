@@ -6,15 +6,15 @@ import customRoutes from "./Customs/customRoutes";
 import customLayout from "./Customs/customLayout.jsx";
 
 import {
-People as UserIcon,
-EventAvailable as AvailablilityIcon,
-HourglassEmptyOutlined as ConsultationHourIcon,
-DesktopWindows as ScreenIcon,
-Slideshow as SlideshowIcon,
-Functions as SlideshowVariableIcon,
-RssFeed as RssSlideIcon,
-PermMedia as MediaSlideIcon,
-Assignment as TextSlideIcon
+    People as UserIcon,
+    EventAvailable as AvailablilityIcon,
+    HourglassEmptyOutlined as ConsultationHourIcon,
+    DesktopWindows as ScreenIcon,
+    Slideshow as SlideshowIcon,
+    Functions as SlideshowVariableIcon,
+    RssFeed as RssSlideIcon,
+    PermMedia as MediaSlideIcon,
+    Assignment as TextSlideIcon
 } from '@mui/icons-material'
 
 import { UsersList, UsersEdit, UsersCreate } from './Entities/users';

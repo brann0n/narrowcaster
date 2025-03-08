@@ -67,7 +67,7 @@ function Slideshow(props) {
   React.useEffect(() => {
     resetTimeout();
 
-    if(slides.length !== 0) {
+    if (slides.length !== 0) {
       const slideDelay = slides[index].duration;
       const slidesLength = slides.length;
       timeoutRef.current = setTimeout(
@@ -78,7 +78,7 @@ function Slideshow(props) {
             props.onSlideshowCompleted(props.id); //tell the slideshow parent that it made a full rotation.
             setIndex(0);
           }
-          else{
+          else {
             setIndex((prevIndex) => {
               return prevIndex + 1;
             });

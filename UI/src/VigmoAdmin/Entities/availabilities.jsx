@@ -8,7 +8,7 @@ export const AvailabilitiesList = props => (
             <TextField source="id" />
             <ReferenceField source="userId" reference="users"><TextField source="username" /></ReferenceField>
             <TextField source="weekDay" />
-            <SelectField source="weekDay" choices={workDays}/>
+            <SelectField source="weekDay" choices={workDays} />
             <TextField source="startTime" />
             <TextField source="endTime" />
         </Datagrid>

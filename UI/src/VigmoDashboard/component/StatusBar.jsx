@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { useDate } from "../logic/currentTime";
 import "./StatusBar.css";
 
@@ -11,13 +10,11 @@ const StatusBar = () => {
         greeting: true
     });
 
-    const changeGreeting = () => { //i pick a random quote from 1 to 100 and set it
-
+    const changeGreeting = () => {
         const dateTimeString = date + " " + time;
         const greetingString = wish + " Students!";
 
         if (dateTimeString === currentDisplay.text || greetingString === currentDisplay.text) {
-            //this means no useDate() update was issued: 
             if (currentDisplay.greeting) {
                 setCurrentDisplay({
                     text: dateTimeString,
@@ -32,7 +29,6 @@ const StatusBar = () => {
             }
         }
         else {
-            //this means the time changed and the component wants to update.
             if (currentDisplay.greeting) {
                 setCurrentDisplay({
                     text: greetingString,
