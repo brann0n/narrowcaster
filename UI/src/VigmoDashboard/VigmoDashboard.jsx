@@ -16,7 +16,6 @@ const httpClient = (url, options = {}) => {
     }
     const token = localStorage.getItem('screen_token');
     options.headers.set('Authorization', `Bearer ${token}`);
-    console.log("HTTP -> " + url + " token length: ", token.length);
     return fetchUtils.fetchJson(url, options);
 };
 

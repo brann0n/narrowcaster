@@ -49,8 +49,6 @@ const SlideShowPanel = (props) => {
       setLoaded(false);
     }
     else {
-      console.log("current slideshow", currentSlideshow);
-
       setLoaded(true);
     }
   }, [currentSlideshow]);
@@ -58,20 +56,15 @@ const SlideShowPanel = (props) => {
 
   //function to execute when a slideshow has done its rotation, this means move on to the next slideshow, if there are any.
   const slideShowCompleted = (id) => {
-    console.log("Done with slideshow: ", slideshows[id]);
-
     let nextSlideId = 0;
     if (currentSlideshow != null && currentSlideshow != undefined) {
       nextSlideId = slideshows.indexOf(currentSlideshow) + 1;
-      console.log("nextSlideId: ", nextSlideId);
     }
     else {
       setLoaded(false);
     }
 
     if (nextSlideId >= slideshows.length) nextSlideId = 0; //start again.
-
-    console.log("id: ", nextSlideId);
 
     setCurrentSlideshow(slideshows[nextSlideId]);
     setSlideshowName(slideshows[nextSlideId].name);

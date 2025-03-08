@@ -26,7 +26,6 @@ function Slideshow(props) {
 
   React.useEffect(() => {
     api.getSlides(currentSlideshow.id).then((data) => {
-      console.log(data);
       if (data.data.length == 0) {
         //if this slideshow contains no slides, tell the parent that its completed its rotation.
         props.onSlideshowCompleted(props.id);
@@ -72,7 +71,6 @@ function Slideshow(props) {
       const slidesLength = slides.length;
       timeoutRef.current = setTimeout(
         () => {
-          console.log("Slideshow Completed", index + 1 > slidesLength);
           if (index + 1 >= slidesLength) {
             resetTimeout();
             props.onSlideshowCompleted(props.id); //tell the slideshow parent that it made a full rotation.
