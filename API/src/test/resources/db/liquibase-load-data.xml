@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <include file="changelog_master.xml" relativeToChangelogFile="true"/>
+    <changeSet id="1" author="Thomas">
+        <loadData tableName="users" file="users.csv">
+            <column type="bigint" header="id"/>
+            <column type="varchar" header="username"/>
+            <column type="varchar" header="password"/>
+            <column type="boolean" header="enabled"/>
+            <column type="varchar" header="role"/>
+            <column type="varchar" header="pfp_location"/>
+        </loadData>
+        <loadData tableName="availabilities" file="availabilities.csv">
+            <column type="bigint" header="id"/>
+            <column type="bigint" header="user_id"/>
+            <column type="varchar" header="week_day"/>
+            <column type="time" header="start_time"/>
+            <column type="time" header="end_time"/>
+        </loadData>
+        <loadData tableName="consultation_hours" file="consultation_hours.csv">
+            <column type="bigint" header="id"/>
+            <column type="varchar" header="description"/>
+            <column type="varchar" header="week_day"/>
+            <column type="time" header="start_time"/>
+            <column type="time" header="end_time"/>
+        </loadData>
+        <loadData tableName="logs" file="logs.csv">
+            <column type="bigint" header="id"/>
+            <column type="bigint" header="user_id"/>
+            <column type="varchar" header="username"/>
+            <column type="varchar" header="action"/>
+            <column type="varchar" header="message"/>
+            <column type="datetime" header="datetime"/>
+        </loadData>
+        <loadData tableName="screens" file="screens.csv">
+            <column type="bigint" header="id"/>
+            <column type="bigint" header="slideshow_id"/>
+            <column type="boolean" header="is_active"/>
+            <column type="int" header="duration"/>
+            <column type="date" header="start_date"/>
+            <column type="date" header="end_date"/>
+            <column type="time" header="start_time"/>
+            <column type="time" header="end_time"/>
+        </loadData>
+        <loadData tableName="slideshows" file="slideshows.csv">
+            <column type="bigint" header="id"/>
+            <column type="bigint" header="screen_id"/>
+            <column type="varchar" header="name"/>
+        </loadData>
+        <loadData tableName="slideshow_variables" file="slideshow_variables.csv">
+            <column type="bigint" header="id"/>
+            <column type="bigint" header="slideshow_id"/>
+            <column type="varchar" header="name"/>
+            <column type="varchar" header="value"/>
+        </loadData>
+        <loadData tableName="slides" file="slides.csv">
+            <column type="bigint" header="id"/>
+            <column type="bigint" header="slideshow_id"/>
+            <column type="varchar" header="type"/>
+            <column type="boolean" header="is_active"/>
+            <column type="int" header="duration"/>
+            <column type="date" header="start_date"/>
+            <column type="date" header="end_date"/>
+            <column type="time" header="start_time"/>
+            <column type="time" header="end_time"/>
+        </loadData>
+        <loadData tableName="media_slides" file="media_slides.csv">
+            <column type="bigint" header="id"/>
+            <column type="boolean" header="audio_enabled"/>
+            <column type="varchar" header="type"/>
+            <column type="varchar" header="resource"/>
+        </loadData>
+        <loadData tableName="rss_slides" file="rss_slides.csv">
+            <column type="bigint" header="id"/>
+            <column type="varchar" header="url"/>
+            <column type="varchar" header="title_tag"/>
+            <column type="varchar" header="description_tag"/>
+            <column type="varchar" header="author_tag"/>
+            <column type="varchar" header="category_tag"/>
+            <column type="varchar" header="image_tag"/>
+        </loadData>
+        <loadData tableName="text_slides" file="text_slides.csv">
+            <column type="bigint" header="id"/>
+            <column type="varchar" header="title"/>
+            <column type="text" header="message"/>
+        </loadData>
+        <loadData tableName="files" file="files.csv">
+            <column type="BIGINT" header="id"/>
+            <column type="VARCHAR(220)" header="file_name"/>
+            <column type="VARCHAR(50)" header="mime_type"/>
+            <column type="BLOB" header="file"/>
+            <column type="VARCHAR(64)" header="file_key"/>
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,7 @@
+.component-sidebar {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 20px;
+    min-width: 258px;
+}

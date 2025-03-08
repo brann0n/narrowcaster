@@ -1,0 +1,6 @@
+# Project exclude paths
+/target/
+/.idea/
+.run/Tomcat 9.0.55.run.xml
+.idea/misc.xml
+/coverage/

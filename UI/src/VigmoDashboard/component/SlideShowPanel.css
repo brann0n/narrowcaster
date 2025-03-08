@@ -1,0 +1,8 @@
+.component-slideshow-panel {
+  background-color: #0088fe;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}

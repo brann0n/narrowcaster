@@ -1,0 +1,14 @@
+.component-statusbar {
+    background-color: #2196f3;
+    color: white;
+    text-align: right;
+    font-weight: 200;
+    width: 100%;
+    height: 48px;
+}
+
+.component-statusbar>div {
+    display: inline-block;
+    font-size: 2rem;
+    padding: 0.2rem 0.7rem 0.1rem 0.5rem;
+}
