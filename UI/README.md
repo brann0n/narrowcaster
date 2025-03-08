@@ -1,7 +1,7 @@
 [![Website narrowcaster.ga](https://img.shields.io/website-up-down-green-red/https/narrowcaster.ba99.nl.svg)](https://narrowcaster.ga/)
 
 # Narrowcaster Admin Panel
-_This project works with the [Narrowcaster Api](https://github.com/brann0n/narrowcaster/API). This admin panel allows the admin to configure the dashboards displayed using the narrowcasting service._
+_This project works with the [Narrowcaster Api](https://github.com/brann0n/narrowcaster/tree/main/API). This admin panel allows the admin to configure the dashboards displayed using the narrowcasting service._
 
 ![dashboard-example](docs/img/dashboard-example.png?raw=true "Dashboard Example")
 
